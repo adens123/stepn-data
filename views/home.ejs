@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stepN 生鞋成本</title>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <h1>stepN 生鞋成本計算</h1>
+    <h2>即時價格</h2>
+    <ul>
+      <li>GMT: <span style="color: blue"><%= gmt.price %> USDC</span></li>
+      <li>GST: <span style="color: blue"><%= gst.price %> USDC</span></li>
+      <li>
+        scroll(floor price):
+        <span style="color: blue"><%= scroll.price %> GMT</span>
+      </li>
+      <li>
+        mint cost:
+        <span style="color: blue"><%= mintCost.toFixed( 2 )%> GMT</span>
+      </li>
+      <li>
+        sneaker(floor price):
+        <span style="color: blue; font-size: 2rem"
+          ><%= sneaker.price %> GMT</span
+        >
+      </li>
+    </ul>
+    <h3>
+      鞋地板價格大於
+      <span style="color: red; font-size: 2rem"
+        ><%= ( mintCost / 0.94 ).toFixed(2)%> GMT</span
+      >，生鞋才有利潤
+    </h3>
+    <script>
+      setTimeout(function () {
+        window.location.href = "/";
+      }, 10000);
+    </script>
+  </body>
+</html>
