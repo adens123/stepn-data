@@ -98,13 +98,4 @@ async function main() {
   return priceArr;
 }
 
-async function start() {
-  const client = await main();
-  module.exports = client;
-  const app = require("./app");
-  app.listen(process.env.PORT || 3000, () => {
-    console.log("Server is running");
-  });
-}
-
-start();
+module.exports = main;
