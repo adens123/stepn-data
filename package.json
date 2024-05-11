@@ -4,8 +4,8 @@
   "description": "",
   "main": "getCM_price.js",
   "scripts": {
-    "build": "node app",
-    "watch": "nodemon app",
+    "build": "node getCM_price",
+    "watch": "nodemon getCM_price",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

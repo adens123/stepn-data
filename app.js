@@ -1,6 +1,4 @@
 const express = require("express");
-// const priceData = require("./getCM_price.js");
-
 const app = express();
 
 const router = require("./router");
@@ -13,6 +11,4 @@ app.set("view engine", "ejs");
 
 app.use("/", router);
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Server is running");
-});
+module.exports = app;
